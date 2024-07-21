@@ -1,0 +1,14 @@
+CC=gcc
+CFLAGS=-c -Wall
+LFLAGS=-o
+
+all: search
+
+search: search.o
+	$(CC) $(LFLAGS) search search.o
+
+search.o: search.c
+	$(CC) $(CFLAGS) search.c
+
+clean:
+	rm -f search search.o
